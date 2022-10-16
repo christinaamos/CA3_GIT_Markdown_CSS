@@ -47,6 +47,19 @@
       .flex-container {display: flex;}
       .flex-container > div {width: 800px;}
 
+      /* Aside Formatting */
+      aside {color: var(--c-green);}
+      a.one:link{color: var(--c-red)}
+      a.one:hover{color:var(--c-blue)}
+
+      /* flex container two */
+      .flex-containertwo {
+          display: flex;
+          align-items: stretch;
+      }
+      .flex-containertwo > div {
+ 
+}
     </style>
 
   </head>
@@ -61,11 +74,13 @@
     <nav>
       <ul>
         <div class="flex-container">
-          <a href="#">Home</a></li>
-          <a href="#">Our team</a></li>
-          <a href="#">Projects</a></li>
-          <a href="#">Contact</a></li>
-        </ul>
+          <div><a href="#">Home</a></li></div>
+          <div><a href="#">Home</a></li></div>
+          <div><a href="#">Our team</a></li></div>
+          <div><a href="#">Projects</a></li></div>
+          <div><a href="#">Contact</a></li></div>
+        </div>
+      </ul>
 
        <!-- A Search form is another common non-linear way to navigate through a website. -->
 
@@ -79,39 +94,41 @@
     <main>
 
       <!-- It contains an article -->
-      <article>
+      <div class="flex-containertwo">
+        <div style= "flex-grow: 8">
+          <article>
+            <h2>Article heading</h2>
+            
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet 
+            vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+            
+            <div class="borderdiv">
+            <h3>Subsection</h3>
 
-        <h2> Article heading</h2>
+            <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p></p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
-        
-        <div class="borderdiv">
-        <h3>Subsection</h3>
+            <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p></div>
 
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+            <div class="borderdiv">
+            <h3>Another subsection</h3>
 
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+            <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
 
-        <div class="borderdiv">
-        <h3>Another subsection</h3>
-
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
-      </article>
+            <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p></div></div>
+          </article>
 
       <!-- the aside content can also be nested within the main content -->
-      <aside>
-        <h2>Related</h2>
-
-        <ul>
-          <li><a href="#">Oh I do like to be beside the seaside</a></li>
-          <li><a href="#">Oh I do like to be beside the sea</a></li>
-          <li><a href="#">Although in the North of England</a></li>
-          <li><a href="#">It never stops raining</a></li>
-          <li><a href="#">Oh well...</a></li>
-        </ul></div>
-      </aside>
+      <div style= "flex-grow: 1">
+        <aside>
+          <h2>Related</h2>
+          <ul>
+            <li><a class="one" href="#">Oh I do like to be beside the seaside</a></li>
+            <li><a class="one" href="#">Oh I do like to be beside the sea</a></li>
+            <li><a class="one" href="#">Although in the North of England</a></li>
+            <li><a class="one" href="#">It never stops raining</a></li>
+            <li><a class="one" href="#">Oh well...</a></li>
+          </ul></div>
+        </aside>
 
     </main>
 
